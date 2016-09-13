@@ -1,0 +1,88 @@
+﻿<root>
+	
+  <TopLevelMenu Name="20" Text="Customer" image="customers">
+    <MenuItem Name="201" Text="New Customer" OnClick="F:frmAccountCode" image="customernew" Type="Form"/>
+    <MenuItem Name="202" Text="Edit Customer" OnClick="F:frmSearchCustomer" image="customeredit" Type="Form"/>
+    <MenuItem Name="203" Text="Add Potential Customer " OnClick="F:frmAddpotenialCustomer" image="customernew" Type="Form"/>
+    <MenuItem Name="204" Text="Edit Potential Customer " OnClick="F:frmSearchPotentialCustomer" image="customeredit" Type="Form"/>
+    <MenuItem Name="205" Text="Delete Potential Customer " OnClick="F:frmDeletePotentialCustomer" image="customeredit" Type="Form"/>
+    <MenuItem Name="206" Text="Exit" OnClick="P:CloseApp" image="exit"/>
+    </TopLevelMenu>
+  <TopLevelMenu Name="30" Text="Invoice" image="dollar">
+    <MenuItem Name="3001" Text="Invoice Without Styles" OnClick="F:frmSearchInvoiceCustomer" image="invoice_add" Type="Form"/>
+    <MenuItem Name="3002" Text="Edit Invoice" OnClick="F:frmSearchInvoice" image="invoice_edit" Type="Form"/>
+    <MenuItem Name="3003" Text="Delete Invoice" OnClick="F:frmDeleteInvoice" image="invoice_delete" Type="Form"/>
+    <MenuItem Text="-" />
+    <MenuItem Name="3005" Text="Reprint Invoice" OnClick="F:frmReprintInvoice" image="printer" Type="Form"/>
+    <MenuItem Name="3006" Text="Invoice Status" OnClick="F:frmInvoiceStatus" image="printer" Type="Form"/>
+    <MenuItem Name="3006" Text="Statement of Invoice" OnClick="F:frmStatementofInvoice" image="soi" Type="Form"/>
+  </TopLevelMenu>
+  <TopLevelMenu Name="40" Text="Memo" image="memo">
+    <MenuItem Name="4001" Text="Status of Memo" OnClick="F:frmStatusofMemo" image="memoreport" Type="Form"/>
+    <MenuItem Name="4002" Text="Style Tracking" OnClick="F:frmStyleTracking" image="styletracking" Type="Form"/>
+    <MenuItem Name="4003" Text="Statement of Memos" OnClick="F:frmStatementofMemo" image="statementofmemo" Type="Form"/>
+    <MenuItem Name="4004" Text="Open Memo Items" OnClick="F:frmListMemodOut" image="statementofmemo" Type="Form"/>
+    
+  </TopLevelMenu>
+  <TopLevelMenu Name="60" Text="Repair Orders" image="customers">
+    <MenuItem Name="601" Text="Repair Order" OnClick="F:frmNewOrderRepair" image="customernew" Type="Form"/>
+    <MenuItem Name="601" Text="Edit Repair Order" OnClick="F:frmEnterRepairORdernumber" image="customernew" Type="Form"/>
+     <MenuItem Name="601" Text="Repair Order Invoice" OnClick="F:frmRepairOrderInvoice" image="customernew" Type="Form"/>
+     <MenuItem Name="601" Text="Edit A Repair Order Invoice" OnClick="F:frmEditRepairInvoice" image="customernew" Type="Form"/>
+     <MenuItem Name="601" Text="Delete A Repair Order" OnClick="F:frmDeleteRepairOrder" image="customernew" Type="Form"/>
+     <MenuItem Name="601" Text="Delete A Repair Invoice" OnClick="F:frmDeleteInvoice" image="customernew" Type="Form"/>
+   
+    </TopLevelMenu>
+  
+  <TopLevelMenu Name="50" Text="A.R. Cash Receipts/ Credits" image="memo">
+      <MenuItem Name="5001" Text="Add a Cash Receipt" OnClick="F:frmAddCashReceiptNew" image="memoreport" Type="Form"/>
+      <MenuItem Name="5002" Text="Edit a Cash Receipt" OnClick="F:frmEditCashReceipt" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Reprint Cash Receipt" OnClick="F:frmReprintReceipt" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Print Cash Receipt/Credit by Cust. Ref." OnClick="F:frmPrintReceiptCreditByCustRef" image="memoreport" Type="Form"/>
+      <MenuItem Name="5004" Text="Delete Cash Receipt" OnClick="F:frmDeleteReceipt" image="memoreport" Type="Form"/>
+      <MenuItem Text="-" />
+      <MenuItem Name="5005" Text="Add/Edit Credit" OnClick="F:frmAddEditCredit" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Reprint Credit" OnClick="F:frmReprintCredit" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Delete Credit" OnClick="F:frmDeleteCredit" image="memoreport" Type="Form"/>
+      <MenuItem Text="-" />
+    <MenuItem Name="5003" Text="Cash Receipts / Credits Within Time Frame" OnClick="F:frmRcblCreditByTimeFrame" image="memoreport" Type="Form"/>
+    <MenuItem Text="-" />
+      <MenuItem Name="5003" Text="Add Adj. Receivable to Clear RTVs" OnClick="F:frmAddAdjReceivable" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Edit Adj. Receivable" OnClick="F:frmEditAdjRcvable" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Print Adj. Receivable" OnClick="F:frmReprintAdjRcvable" image="memoreport" Type="Form"/>
+      <MenuItem Name="5003" Text="Delete Adj. Receivable" OnClick="F:frmDeleteReceipt" image="memoreport" Type="Form"/>
+      <MenuItem Text="-" />
+  </TopLevelMenu>
+  <TopLevelMenu Name="70" Text="Salesman Inventory" image="admin">
+    
+    <MenuItem Name="701" Text="Add To Salesman Inventory" OnClick="F:frmAddSalesmanLog" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Deduct from Salesman Inventory" OnClick="F:frmDeductSalesmanLog" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Edit Salesman Inventory" OnClick="F:frmEditSalesmanInventory" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Return a Log to a Salesman" OnClick="F:frmReturnLog" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Print Items Added to Salesman Inventory" OnClick="F:frmReprintSalesmanLog" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Cancel Items Added to Salesman Inventory" OnClick="F:frmCancelSalesmanItems" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Print A Salesman Inventory" OnClick="F:frmPrintSalesmanInventory" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Style Tracking by Salesman Inventory" OnClick="F:frmStyleTrackingSlsInv" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Clear a Salesman Line" OnClick="F:frmClearSalesmanLine" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="History of Salesman Inventory" OnClick="F:frmSlsHistory" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="Summary History of a Salesman Inventory" OnClick="F:frmSummaryHistorySlsline" image="dollar" Type="Form"/>
+    <MenuItem Name="701" Text="ReCalculate Salesman Line" OnClick="F:frmRecalculateSlsInv" image="dollar" Type="Form"/>
+  
+  </TopLevelMenu>
+  
+  <TopLevelMenu Name="70" Text="Admin" image="admin">
+
+    <MenuItem Name="701" Text="Email Settings" OnClick="F:frmEmailSettings" image="dollar" Type="Form"/>
+  </TopLevelMenu>
+  <TopLevelMenu Name="80" Text="Reporting" image="report">
+     <MenuItem Name="801" Text="Customer Reports" image="customerlist">
+        <MenuItem Name="870" Text="Customer List" OnClick="F:frmCustomerReport" image="report" Type="Form"/>
+        <MenuItem Name="871" Text="Potential Customer List" OnClick="F:frmPotentialCustomerReport" image="report" Type="Form"/>
+    </MenuItem> 
+  </TopLevelMenu> 
+  
+	<TopLevelMenu Name="90" Text="Help" image="help">
+	</TopLevelMenu>
+	
+
+</root>

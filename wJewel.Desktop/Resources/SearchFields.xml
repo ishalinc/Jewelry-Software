@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchFields>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>bill_acc</FieldName>
+    <FieldCaption>Billing Acct #</FieldCaption>
+    <FieldWidth>70</FieldWidth>
+  </SearchFieldsRow>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>name</FieldName>
+    <FieldCaption>Name</FieldCaption>
+    <FieldWidth>100</FieldWidth>
+  </SearchFieldsRow>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>Tel</FieldName>
+    <FieldCaption>Tel</FieldCaption>
+    <FieldWidth>100</FieldWidth>
+  </SearchFieldsRow>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>addr1</FieldName>
+    <FieldCaption>Address</FieldCaption>
+    <FieldWidth>100</FieldWidth>
+  </SearchFieldsRow>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>state1</FieldName>
+    <FieldCaption>State</FieldCaption>
+    <FieldWidth>100</FieldWidth>
+  </SearchFieldsRow>
+  <SearchFieldsRow>
+    <sid>BillAccountSearch</sid>
+    <FieldName>zip1</FieldName>
+    <FieldCaption>Zip</FieldCaption>
+    <FieldWidth>70</FieldWidth>
+  </SearchFieldsRow>
+
+ </SearchFields>

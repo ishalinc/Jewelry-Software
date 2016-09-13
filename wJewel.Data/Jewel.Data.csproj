@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0055EB5-0661-4CA3-9F07-0B9345553719}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IshalInc.wJewel.Data</RootNamespace>
+    <AssemblyName>IshalInc.wJewel.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessService\SalesmenService.cs" />
+    <Compile Include="BusinessService\ISalesmenService.cs" />
+    <Compile Include="BusinessService\IOrderRepairService.cs" />
+    <Compile Include="BusinessService\IPotentialCustomerService.cs" />
+    <Compile Include="BusinessService\OrderRepairService.cs" />
+    <Compile Include="BusinessService\PotentialCustomerService.cs" />
+    <Compile Include="BusinessService\ReceiptService.cs" />
+    <Compile Include="BusinessService\IReceiptService.cs" />
+    <Compile Include="BusinessService\IInvoiceItemsService.cs" />
+    <Compile Include="BusinessService\IBankAccService.cs" />
+    <Compile Include="BusinessService\IMemoService.cs" />
+    <Compile Include="BusinessService\InvoiceItemsService.cs" />
+    <Compile Include="BusinessService\BankAccService.cs" />
+    <Compile Include="BusinessService\MemoService.cs" />
+    <Compile Include="BusinessService\InvoiceService.cs" />
+    <Compile Include="BusinessService\CustomerService.cs" />
+    <Compile Include="BusinessService\IInvoiceService.cs" />
+    <Compile Include="BusinessService\ICustomerService.cs" />
+    <Compile Include="DataAccess\SalesmenAccess.cs" />
+    <Compile Include="DataAccess\ISalesmenAccess.cs" />
+    <Compile Include="DataAccess\IOrderRepairAccess.cs" />
+    <Compile Include="DataAccess\IPotentialcustomerAccess.cs" />
+    <Compile Include="DataAccess\OrderRepairAccess.cs" />
+    <Compile Include="DataAccess\PotentialcustomerAccess.cs" />
+    <Compile Include="DataAccess\ReceiptAccess.cs" />
+    <Compile Include="DataAccess\ConnectionAccess.cs" />
+    <Compile Include="DataAccess\IReceiptAccess.cs" />
+    <Compile Include="DataAccess\IBankAccAccess.cs" />
+    <Compile Include="DataAccess\IMemoAccess .cs" />
+    <Compile Include="DataAccess\IInvoiceItemsAccess.cs" />
+    <Compile Include="DataAccess\BankAccAccess.cs" />
+    <Compile Include="DataAccess\MemoAccess.cs" />
+    <Compile Include="DataAccess\InvoiceItemsAccess.cs" />
+    <Compile Include="DataAccess\InvoiceAccess.cs" />
+    <Compile Include="DataAccess\CustomerAccess.cs" />
+    <Compile Include="DataAccess\ICustomerAccess.cs" />
+    <Compile Include="DataAccess\IInvoiceAccess.cs" />
+    <Compile Include="DataModel\Salesmen.cs" />
+    <Compile Include="DataModel\InvoiceItemsModel.cs" />
+    <Compile Include="DataModel\BankAcc.cs" />
+    <Compile Include="DataModel\MemoModel.cs" />
+    <Compile Include="DataModel\InvoiceModel.cs" />
+    <Compile Include="DataModel\PotentialcustomerModel.cs" />
+    <Compile Include="DataModel\RepairorderModel.cs" />
+    <Compile Include="Sql\Scripts.cs" />
+    <Compile Include="DataModel\CustomerModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\script_potentialcustomer.cs" />
+    <Compile Include="Sql\script_salesmaninventory.cs" />
+    <Compile Include="Sql\script_repairorders.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

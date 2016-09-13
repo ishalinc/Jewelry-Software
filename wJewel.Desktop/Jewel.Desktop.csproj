@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0450FA60-C08F-4163-B953-80426F3576A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IshalInc.wJewel.Desktop</RootNamespace>
+    <AssemblyName>Jewelry Software</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.ChartView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.PdfViewer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.PivotGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadChart, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.RadChart.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.RadDiagram.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.RichTextEditor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.Scheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI.Design, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\Telerik.WinControls.UI.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikData, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2016.1.112.40\TelerikData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddAdjReceivable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddAdjReceivable.Designer.cs">
+      <DependentUpon>frmAddAdjReceivable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddCashReceiptNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddCashReceiptNew.Designer.cs">
+      <DependentUpon>frmAddCashReceiptNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddEditCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmAddEditCredit.Designer.cs">
+      <DependentUpon>frmAddEditCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmDeleteCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmDeleteCredit.Designer.cs">
+      <DependentUpon>frmDeleteCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmEditAdjRcvable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmEditAdjRcvable.Designer.cs">
+      <DependentUpon>frmEditAdjRcvable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmEditCashReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmEditCashReceipt.Designer.cs">
+      <DependentUpon>frmEditCashReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmDeleteReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmDeleteReceipt.Designer.cs">
+      <DependentUpon>frmDeleteReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmCreditByCreditCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmCreditByCreditCode.Designer.cs">
+      <DependentUpon>frmCreditByCreditCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintAdjRcvable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintAdjRcvable.Designer.cs">
+      <DependentUpon>frmPrintAdjRcvable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceiptCreditByCustRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceiptCreditByCustRef.Designer.cs">
+      <DependentUpon>frmPrintReceiptCreditByCustRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintCredit.Designer.cs">
+      <DependentUpon>frmPrintCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintAdjRcvable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintAdjRcvable.Designer.cs">
+      <DependentUpon>frmReprintAdjRcvable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmRcblCreditByTimeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmRcblCreditByTimeFrame.Designer.cs">
+      <DependentUpon>frmRcblCreditByTimeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintReceipt.Designer.cs">
+      <DependentUpon>frmReprintReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceipt.Designer.cs">
+      <DependentUpon>frmPrintReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmSelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmSelectCustomer.Designer.cs">
+      <DependentUpon>frmSelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\frmEmailSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\frmEmailSettings.Designer.cs">
+      <DependentUpon>frmEmailSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmAddpotenialCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmAddpotenialCustomer.designer.cs">
+      <DependentUpon>frmAddpotenialCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmBillingAccountNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmBillingAccountNumber.Designer.cs">
+      <DependentUpon>frmBillingAccountNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmAccountCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmAccountCode.Designer.cs">
+      <DependentUpon>frmAccountCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmDeletePotentialCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmDeletePotentialCustomer.designer.cs">
+      <DependentUpon>frmDeletePotentialCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmPotentialCustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmPotentialCustomerReport.designer.cs">
+      <DependentUpon>frmPotentialCustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmSearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmSearchCustomer.Designer.cs">
+      <DependentUpon>frmSearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmNewCustomer.Designer.cs">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmSearchPotentialCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmSearchPotentialCustomer.designer.cs">
+      <DependentUpon>frmSearchPotentialCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMasterPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMasterPassword.Designer.cs">
+      <DependentUpon>frmMasterPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\frmCustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\frmCustomerReport.Designer.cs">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\A. R. Cash Receipts - Credits\frmReprintCredit.Designer.cs">
+      <DependentUpon>frmReprintCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceNotFromPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceNotFromPO.Designer.cs">
+      <DependentUpon>frmInvoiceNotFromPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoice.Designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceReport.Designer.cs">
+      <DependentUpon>frmInvoiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmDeleteInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmDeleteInvoice.Designer.cs">
+      <DependentUpon>frmDeleteInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmStatementofInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmStatementofInvoice.Designer.cs">
+      <DependentUpon>frmStatementofInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmInvoiceStatus.Designer.cs">
+      <DependentUpon>frmInvoiceStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmReprintInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmReprintInvoice.Designer.cs">
+      <DependentUpon>frmReprintInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmSearchInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmSearchInvoice.Designer.cs">
+      <DependentUpon>frmSearchInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmSearchInvoiceCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoice\frmSearchInvoiceCustomer.Designer.cs">
+      <DependentUpon>frmSearchInvoiceCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Memo\frmOpenMemoItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Memo\frmOpenMemoItems.Designer.cs">
+      <DependentUpon>frmOpenMemoItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStatementofMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStatementofMemo.Designer.cs">
+      <DependentUpon>frmStatementofMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Memo\frmListMemodOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Memo\frmListMemodOut.Designer.cs">
+      <DependentUpon>frmListMemodOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStyleTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStyleTracking.Designer.cs">
+      <DependentUpon>frmStyleTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStatusofMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Memo\frmStatusofMemo.Designer.cs">
+      <DependentUpon>frmStatusofMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmAddRepairOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmAddRepairOrder.designer.cs">
+      <DependentUpon>frmAddRepairOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmCreateRepairOrderInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmCreateRepairOrderInvoice.designer.cs">
+      <DependentUpon>frmCreateRepairOrderInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmDeleteRepairOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmDeleteRepairOrder.designer.cs">
+      <DependentUpon>frmDeleteRepairOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairInvoice.designer.cs">
+      <DependentUpon>frmEditRepairInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairOrder.designer.cs">
+      <DependentUpon>frmEditRepairOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairOrderInvoiceBasedOnInvoceId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEditRepairOrderInvoiceBasedOnInvoceId.designer.cs">
+      <DependentUpon>frmEditRepairOrderInvoiceBasedOnInvoceId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEnterRepairORdernumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmEnterRepairORdernumber.designer.cs">
+      <DependentUpon>frmEnterRepairORdernumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmNewOrderRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmNewOrderRepair.designer.cs">
+      <DependentUpon>frmNewOrderRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPringRepairInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPringRepairInvoice.designer.cs">
+      <DependentUpon>frmPringRepairInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPrintOptions.designer.cs">
+      <DependentUpon>frmPrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPrintOrderRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmPrintOrderRepair.designer.cs">
+      <DependentUpon>frmPrintOrderRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmRepairOrderInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmRepairOrderInvoice.designer.cs">
+      <DependentUpon>frmRepairOrderInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmRepairOrdersReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repairs\frmRepairOrdersReport.designer.cs">
+      <DependentUpon>frmRepairOrdersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmEmailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmEmailReport.Designer.cs">
+      <DependentUpon>frmEmailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmReportViewer.designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmEditSalesmanInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmEditSalesmanInventory.Designer.cs">
+      <DependentUpon>frmEditSalesmanInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmSummaryHistorySlsline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmSummaryHistorySlsline.Designer.cs">
+      <DependentUpon>frmSummaryHistorySlsline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmRecalculateSlsInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmRecalculateSlsInv.Designer.cs">
+      <DependentUpon>frmRecalculateSlsInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmDeductSalesmanLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmDeductSalesmanLog.Designer.cs">
+      <DependentUpon>frmDeductSalesmanLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmDeductSalesmanInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmDeductSalesmanInventory.Designer.cs">
+      <DependentUpon>frmDeductSalesmanInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmCancelSalesmanItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmCancelSalesmanItems.Designer.cs">
+      <DependentUpon>frmCancelSalesmanItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmPrintSalesmanInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmPrintSalesmanInventory.Designer.cs">
+      <DependentUpon>frmPrintSalesmanInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmReprintSalesmanLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmReprintSalesmanLog.Designer.cs">
+      <DependentUpon>frmReprintSalesmanLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmClearSalesmanLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmClearSalesmanLine.Designer.cs">
+      <DependentUpon>frmClearSalesmanLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmReturnLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmReturnLog.Designer.cs">
+      <DependentUpon>frmReturnLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmSlsHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmSlsHistory.Designer.cs">
+      <DependentUpon>frmSlsHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmStyleTrackingSlsInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmStyleTrackingSlsInv.Designer.cs">
+      <DependentUpon>frmStyleTrackingSlsInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmAddSalesmanLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmAddSalesmanLog.Designer.cs">
+      <DependentUpon>frmAddSalesmanLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmAddSalesmanInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesman Inventory\frmAddSalesmanInventory.Designer.cs">
+      <DependentUpon>frmAddSalesmanInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\DyamicMenu.cs" />
+    <Compile Include="Libraries\Helper.cs" />
+    <Compile Include="Libraries\LineSeparator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Libraries\LineSeparator.Designer.cs">
+      <DependentUpon>LineSeparator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\NullableDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libraries\NullDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libraries\NumericTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libraries\ReportPrinting.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmAddAdjReceivable.resx">
+      <DependentUpon>frmAddAdjReceivable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmAddCashReceiptNew.resx">
+      <DependentUpon>frmAddCashReceiptNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmAddEditCredit.resx">
+      <DependentUpon>frmAddEditCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmDeleteCredit.resx">
+      <DependentUpon>frmDeleteCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmEditAdjRcvable.resx">
+      <DependentUpon>frmEditAdjRcvable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmEditCashReceipt.resx">
+      <DependentUpon>frmEditCashReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmDeleteReceipt.resx">
+      <DependentUpon>frmDeleteReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmCreditByCreditCode.resx">
+      <DependentUpon>frmCreditByCreditCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmPrintAdjRcvable.resx">
+      <DependentUpon>frmPrintAdjRcvable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceiptCreditByCustRef.resx">
+      <DependentUpon>frmPrintReceiptCreditByCustRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmPrintCredit.resx">
+      <DependentUpon>frmPrintCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmReprintAdjRcvable.resx">
+      <DependentUpon>frmReprintAdjRcvable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmRcblCreditByTimeFrame.resx">
+      <DependentUpon>frmRcblCreditByTimeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmReprintReceipt.resx">
+      <DependentUpon>frmReprintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmPrintReceipt.resx">
+      <DependentUpon>frmPrintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmSelectCustomer.resx">
+      <DependentUpon>frmSelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\frmEmailSettings.resx">
+      <DependentUpon>frmEmailSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmAddpotenialCustomer.resx">
+      <DependentUpon>frmAddpotenialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmBillingAccountNumber.resx">
+      <DependentUpon>frmBillingAccountNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmAccountCode.resx">
+      <DependentUpon>frmAccountCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmDeletePotentialCustomer.resx">
+      <DependentUpon>frmDeletePotentialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmPotentialCustomerReport.resx">
+      <DependentUpon>frmPotentialCustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmSearchCustomer.resx">
+      <DependentUpon>frmSearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmNewCustomer.resx">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmSearchPotentialCustomer.resx">
+      <DependentUpon>frmSearchPotentialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMasterPassword.resx">
+      <DependentUpon>frmMasterPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\frmCustomerReport.resx">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\A. R. Cash Receipts - Credits\frmReprintCredit.resx">
+      <DependentUpon>frmReprintCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmInvoiceNotFromPO.resx">
+      <DependentUpon>frmInvoiceNotFromPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmInvoiceReport.resx">
+      <DependentUpon>frmInvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmDeleteInvoice.resx">
+      <DependentUpon>frmDeleteInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmStatementofInvoice.resx">
+      <DependentUpon>frmStatementofInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmInvoiceStatus.resx">
+      <DependentUpon>frmInvoiceStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmReprintInvoice.resx">
+      <DependentUpon>frmReprintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmSearchInvoice.resx">
+      <DependentUpon>frmSearchInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoice\frmSearchInvoiceCustomer.resx">
+      <DependentUpon>frmSearchInvoiceCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Memo\frmOpenMemoItems.resx">
+      <DependentUpon>frmOpenMemoItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Memo\frmStatementofMemo.resx">
+      <DependentUpon>frmStatementofMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Memo\frmListMemodOut.resx">
+      <DependentUpon>frmListMemodOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Memo\frmStyleTracking.resx">
+      <DependentUpon>frmStyleTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Memo\frmStatusofMemo.resx">
+      <DependentUpon>frmStatusofMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmAddRepairOrder.resx">
+      <DependentUpon>frmAddRepairOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmCreateRepairOrderInvoice.resx">
+      <DependentUpon>frmCreateRepairOrderInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmDeleteRepairOrder.resx">
+      <DependentUpon>frmDeleteRepairOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmEditRepairInvoice.resx">
+      <DependentUpon>frmEditRepairInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmEditRepairOrder.resx">
+      <DependentUpon>frmEditRepairOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmEditRepairOrderInvoiceBasedOnInvoceId.resx">
+      <DependentUpon>frmEditRepairOrderInvoiceBasedOnInvoceId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmEnterRepairORdernumber.resx">
+      <DependentUpon>frmEnterRepairORdernumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmNewOrderRepair.resx">
+      <DependentUpon>frmNewOrderRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmPringRepairInvoice.resx">
+      <DependentUpon>frmPringRepairInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmPrintOptions.resx">
+      <DependentUpon>frmPrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmPrintOrderRepair.resx">
+      <DependentUpon>frmPrintOrderRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmRepairOrderInvoice.resx">
+      <DependentUpon>frmRepairOrderInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repairs\frmRepairOrdersReport.resx">
+      <DependentUpon>frmRepairOrdersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmEmailReport.resx">
+      <DependentUpon>frmEmailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptCredit.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptCreditByCreditCode.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptInvoicePOImageSR.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptListofItemsMemodOut.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptListOfRepairOrders.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptOpenMemoItems.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptPOInvoiceImages - Copy.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptPOInvoiceImages.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptPOInvoice.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptPotentialCusomer.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptPrintReceiptCreditByCustRef.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptAdjRcvable.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptRcvableCreditByTimeFrame.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptReceipt.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptRepairOrder.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptSalesInventoryReport.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptSalesmanInvByLineAndStyle.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptSlsSummaryHistory.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptStatementofMemo.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptCustomerList.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptCustomerListOld.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptInvoice.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptInvoiceStatus.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptMemoStatus.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptStatementofInvoice.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptStyleTracking.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptStyleTracking1.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\rptStyleTrackingSlsInv.rdlc" />
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmEditSalesmanInventory.resx">
+      <DependentUpon>frmEditSalesmanInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmSummaryHistorySlsline.resx">
+      <DependentUpon>frmSummaryHistorySlsline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmRecalculateSlsInv.resx">
+      <DependentUpon>frmRecalculateSlsInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmDeductSalesmanLog.resx">
+      <DependentUpon>frmDeductSalesmanLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmDeductSalesmanInventory.resx">
+      <DependentUpon>frmDeductSalesmanInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmCancelSalesmanItems.resx">
+      <DependentUpon>frmCancelSalesmanItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmPrintSalesmanInventory.resx">
+      <DependentUpon>frmPrintSalesmanInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmReprintSalesmanLog.resx">
+      <DependentUpon>frmReprintSalesmanLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmClearSalesmanLine.resx">
+      <DependentUpon>frmClearSalesmanLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmReturnLog.resx">
+      <DependentUpon>frmReturnLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmSlsHistory.resx">
+      <DependentUpon>frmSlsHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmStyleTrackingSlsInv.resx">
+      <DependentUpon>frmStyleTrackingSlsInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmAddSalesmanLog.resx">
+      <DependentUpon>frmAddSalesmanLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesman Inventory\frmAddSalesmanInventory.resx">
+      <DependentUpon>frmAddSalesmanInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptSlsHistory.rdlc" />
+    <EmbeddedResource Include="Libraries\LineSeparator.resx">
+      <DependentUpon>LineSeparator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app_local.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wJewel.Data\Jewel.Data.csproj">
+      <Project>{A0055EB5-0661-4CA3-9F07-0B9345553719}</Project>
+      <Name>Jewel.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customeredit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customerlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customernew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\auto-apply.png" />
+    <None Include="Resources\logo.png" />
+    <Content Include="Resources\SearchFields.xml" />
+    <None Include="Resources\statementofmemo.png" />
+    <None Include="Resources\styletracking.png" />
+    <None Include="Resources\memoreport.png" />
+    <None Include="Resources\memo.png" />
+    <None Include="Resources\soi.png" />
+    <None Include="Resources\invoice_delete.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\invoice_edit.png" />
+    <None Include="Resources\invoice_add.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\invoicereport.png" />
+    <None Include="Resources\searchnew.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\dollar.png" />
+    <None Include="Resources\admin.png" />
+    <Content Include="Resources\element_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User Controls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
